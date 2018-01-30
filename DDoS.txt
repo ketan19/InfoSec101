@@ -1,0 +1,30 @@
+There are three primary categories of DDoS attacks:
+
+1- Volumetric
+2- Protocol
+3- Application 
+
+1- Volumetric
+To be successful, the volumetric DDoS attack only needs to take up enough of the target's Internet connection capacity to affect legitimate operations; a really successful attack will be able to affect most or all of the target's clients. Some common examples of a volumetric attack are Internet Control Message Protocol (ICMP)/User Datagram Protocol (UDP) packet floods, Spoofed packet floods and malformed packet floods.
+
+2-Protocol
+Focused on exhausting the protocol resources of a target. Some common protocol DDoS attack examples include TCP SYN/ACK/RST/Connection floods, TCP state exhaustion and TCP windowing attacks. This type of attack does not require that the attacker consume most or all of the target's available bandwidth, only that it consumes the target's specific resource.
+
+3-Application
+The application DDoS attack is focused more on specific vulnerabilities while the others are targeted at more general resources that exist on many devices. What this means is that this style of attack does not need to be as coordinated as the other two. Some common examples include HTTP GET/POST Floods, DNS amplification, and SSL exhaustion attacks.
+
+
+There are three primary methods of implementing DDoS protections:
+
+1- DDoS Protection service (cloud-based, also referenced as a scrubbing center)
+2- Content Delivery Network (CDN)
+3- On-site equipment
+
+1- DDoS Protection service (cloud-based, also referenced as a scrubbing center)
+All or most of the traffic going to and from a target network is routed through the protection services networking equipment. This service "scrubs" all of the potential threat DDoS traffic and forwards all valid traffic to the target's network. The problem is that when a target routes all of its traffic through a separate entity (like a protection service provider) it can add some complexity to the implementation of specific features used by many enterprises.
+
+2- Content Delivery Network (CDN)
+The use of a CDN distributes the content of the target, this makes it hard to truly ever bring down the service as it exists via multiple sources. This type of implementation does require that the content exists in the CDN and thus requires some additional steps to manage the content to and from the original source and the CDN. 
+
+3- On-site equipment
+All or most of the traffic going to and from a target network is routed through the protection services networking equipment. This service "scrubs" all of the potential threat DDoS traffic and forwards all valid traffic to the target's network. The problem is that when a target routes all of its traffic through a separate entity (like a protection service provider) it can add some complexity to the implementation of specific features used by many enterprises.
