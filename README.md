@@ -2,6 +2,7 @@
 # InfoSec101.tech@gmail.com
 
 Purpose:
+
 The notes cover various and almost all topics you should know as a cyber security enthusiast and specially if you are seeking a career in the field.I have had a hard time finding things that a security enthusiat should know about and i am trying to make it easier for others.
 
 Material use:
