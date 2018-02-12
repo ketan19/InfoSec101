@@ -1,0 +1,7 @@
+HIPAA -Healthcare insurance portability and accountability act
+-Administrative – to create policies and procedures designed to clearly show how the entity will
+comply with the act.
+-Physical – to control physical access to areas of data storage to protect against inappropriate access
+-Technical – to protect communications containing PHI when transmitted electronically over open
+networks
+--HIPAA revolves on mostly Breach Notification Rule, Privacy Rule and Security Rule

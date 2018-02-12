@@ -1,0 +1,41 @@
+ISO27002
+This is code of practice.This is a Generic advisory unlike ISO27001.
+This is to select and implement controls  withint the process of implementing ISMS for ISO27001.and to implement information security guidlines and controls .
+Broken into clauses which describe this such as :
+It recommends controls to maintain the CIA triad of information security, which is Confidentiality Integrity and Availability.
+IT has 19 sections  .Talks more about Mobile devices and wearables and teleworking
+Human resource security before during and employment termination. 
+Asset management. ownership is and should be defined for reources for use and peripherals such as removable media.Information should be labelled and classified by information owners as per the security requirements.Return of it.
+Policy on use of cryptography. what to use and when it is a must.specially for data in transit.Key management and ownership
+Physical security.
+Operations security such as backup,malware protection,loggin,vulnerability management,rules for software installation by users,
+NDAs for information exchange and transfers to external entities.
+Rules for secure software development should be governed and controlled.same with applications and operating systems.
+Information to be managed with internal and external suppliers.
+Managing risk, and incodent management policies.
+Compliance with legal and contracutal obligations.
+To be in contact wjth Well known security groups to be uptodate about information
+to be in contact with authorities.
+Mobile device policies.registration,soft installation,use,their soft versions,remote disable antivirus,malware tool requirements in those.
+Disciplinary actions for employees responsible for security breach.
+Secure logons like biometric and multiple authentication means
+Display information after successful logons.decide what to do on unsuccessful logins.password change policy,complexity requirements.
+log successful and un atempts. Bruteforce security
+Access control to source code.
+PHysical security to be taken care of.
+Clear desk clear screen policy. no things like passwords on sticky notes and all like we saw recently. Implementing use of shredders specially to personal handling critical information. 
+Procedures for system restard and shutdown.
+Support and escalation contacts for all system groups.
+
+Change management. Making sure changes are fine.implementing the right changes and checking in test and staging environment.
+Deletetion of old data and system efficiency.
+Seperation of testin,staging pro environment and their test data as well
+loggin monitoring
+
+Secure development
+-Best security practicies for all languages used. Security checkpoints in project timeline.security in design phases .
+code analysis tools and vulnerability scanners
+
+---procedures for monitoring, detecting, analysing and reporting of information security events
+and incidents;
+-Employees and contractors should be required to report flaws and issues in system

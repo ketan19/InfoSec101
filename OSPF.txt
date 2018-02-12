@@ -1,0 +1,75 @@
+OSPF- Down, Attempt, INIT,2-way,Exstart,Exchange,Loading,Full
+
+Neighbor adjacencies will progress through several states, including:
+Down – indicates that no Hellos have been heard from the neighboring
+router.
+Init – indicates a Hello packet has been heard from the neighbor, but twoway
+communication has not yet been initialized.
+2-Way – indicates that bidirectional communication has been established.
+Recall that Hello packets contain a neighbor field. Thus, communication is
+considered 2-Way once a router sees its own Router ID in its neighbor’s
+Hello Packet. Designated and Backup Designated Routers are elected at
+this stage.
+ExStart – indicates that the routers are preparing to share link state
+information. Master/slave relationships are formed between routers to
+determine who will begin the exchange.
+Exchange – indicates that the routers are exchanging Database Descriptors
+(DBDs). DBDs contain a description of the router’s Topology Database. A
+router will examine a neighbor’s DBD to determine if it has information to
+share.
+Loading – indicates the routers are finally exchanging Link State
+Advertisements, containing information about all links connected to each
+router. Essentially, routers are sharing their topology tables with each other.
+Full – indicates that the routers are fully synchronized. The topology table of
+all routers in the area should now be identical. Depending on the “role” of
+the neighbor, the state may appear as:
+• Full/DR – indicating that the neighbor is a Designated Router (DR)
+• Full/BDR – indicating that the neighbor is a Backup Designated
+Router (BDR)
+• Full/DROther – indicating that the neighbor is neither the DR or
+BDR
+On a multi-access network, OSPF routers will only form Full adjacencies
+with DRs and BDRs. Non-DRs and non-BDRs will still form adjacencies,
+but will remain in a 2-Way State. This is normal OSPF behavior. 
+---------
+broadcast /non broadcast multi-access will have DR/BR
+
+LSA's are contained within LSU'sample
+LSA TYPE 1 – OSPF ROUTER LSA
+LSA TYPE 2 – OSPF NETWORK LSA
+LSA TYPE 3 – OSPF SUMMARY LSA
+LSA TYPE 4 – OSPF ASBR SUMMARY LSA
+LSA TYPE 5 – OSPF ASBR EXTERNAL LSA
+LSA TYPE 7 – OSPF NOT SO STUBBY AREA (NSSA) EXTERNAL LSA E1, E2
+Two types of external LSA:
+E1: Consider the total cost up to the external destination
+E2: Considers only the cost of the outgoing interface to the external destination 
+An ASBR’s routing table is generated a summary route pointing to Null0, that’s used to drop the packets in case that there’s not a more specific route in ASBR routing table, thus avoiding routing loops.
+A router has a separate LS database for each area to which it belongs
+All routers must accept packets sent to AllSPFRouters (224.0.0.5)
+All DR and BDR routers must accept packetssent to AllDRouters (224.0.0.6) 
+----
+Stubby area- no External routes
+Totaly stubby area- No ABR routes
+Not so stubby areas - direct connected to external and send Type 7 and converted to type 5
+----
+• A neighbor table – contains a list of all neighboring routers.
+• A topology table – contains a list of all possible routes to all known
+networks within an area.
+• A routing table – contains the best route for each known network. ---
+----------
+matching to be neighbours
+Area ID
+• Area Type (stub, NSSA, etc.)
+• Prefix
+• Subnet Mask
+• Hello Interval
+• Dead Interval
+• Network Type (broadcast, point-to-point, etc.)
+• Authentication 
+---------------
+Hello -discover maintain  neighbours– packet type 1
+Database description..summarize database contents – packet type 2
+Link-state request – packet type 3
+Link-state update – packet type 4
+Link-state acknowledgement – packet type 5 

@@ -1,0 +1,23 @@
+ARP
+
+----Hardware type (HTYPE)-Like Othernet which is 1 or ATM,Frame relay
+----Protocol type (PTYPE)
+	This field specifies the internetwork protocol for which the ARP request is intended. For IPv4, this has the value 0x0800. 
+----Hardware length (HLEN)
+	Length (in octets) of a hardware address. Ethernet addresses size is 6.MAC
+----Protocol length (PLEN)
+	Length (in octets) of addresses used in the upper layer protocol. (The upper layer protocol specified in PTYPE.) IPv4 address size is 4.
+----Sender hardware address (SHA)
+MAC
+----Sender protocol address (SPA)
+IP of sender
+----Target hardware address (THA)
+Destination MAC
+----Target protocol address (TPA)
+Destination IP adress
+----Operation 
+1 request
+2 Reply
+
+RARP- To get IP of a machine from RARP server/switch
+RARP is obsolete and is replaced BOOTP/DHCP

@@ -1,0 +1,93 @@
+ Class A   
+Starts with 0
+0.0.0.0-127.255.255.255
+network mask-
+255.0.0.0
+Private
+10.0.0.0-10.255.255.255-CIDR-8
+Loopback  127.0.0.0-127.255.255.255
+total networks 2^7...total hosts (2^24)-2.
+
+
+Class B
+Starts with 10
+128.0.0.0-191.255.255.255
+network mask-
+255.255.0.0
+Private
+172.16.0.0-172.31.255.255-CIDR-12
+total networks 2^14...total hosts (2^16)-2.
+
+
+Class C  
+Starts with 110
+192.0.0.0-223.255.255.255
+network mask-255.255.255.0
+total networks 2^21...total hosts (2^8)-2.
+Private
+192.168.0.0-192.168.255.255-CIDR-16
+
+Class D  
+Starts with 1110
+
+
+Class E
+Starts with 1111
+
+
+
+
+
+ARP request is a frame
+
+--- Class A- 0 
+	ClassB-10 
+	ClassC- 110
+	Subnets 2^n and hosts 2^k-2
+
+1   1  1  1 1 1 1 1
+128 64 32 16 8 4 2 1 (128+64+32+16+8+4+2+1=255)
+
+Class A- Starts with 0
+Default Subnet Mask- 255.0.0.0
+Private IP Range -10.0.0.0 - 10.255.255.255
+
+Class B- Starts with 10
+Default Subnet Mask- 255.255.0.0
+Private IP Range- 172.16.0.0 - 172.31.255.255
+
+
+Class C- Starts with 110
+Default Subnet Mask- 255.255.255.0
+Private IP Range-192.168.0.0 - 192.168.255.255
+
+Class D- Starts with 1110
+Class E- Starts with 1111
+
+Private IP Addresses
+
+Class	Private Networks		  Subnet Mask			Address Range
+A		10.0.0.0				  255.0.0.0			    10.0.0.0 - 10.255.255.255
+B		172.16.0.0 - 172.31.0.0	  255.240.0.0			172.16.0.0 - 172.31.255.255
+C		192.168.0.0				  255.255.0.0			192.168.0.0 - 192.168.255.255
+
+8.20.15.1 = 00001000.00010100.00001111.00000001
+255.0.0.0 = 11111111.00000000.00000000.00000000
+            -----------------------------------
+             net id |      host id             
+--VLSM-Variable Length Subnet Masks (VLSM) allows you to use different masks for each subnet, thereby using address space efficiently
+netA: must support 14 hosts
+netB: must support 28 hosts
+netA: requires a /28 (255.255.255.240) mask to support 14 hosts
+netB: requires a /27 (255.255.255.224) mask to support 28 hosts
+
+
+
+
+-IPV6 adresses 
+Unicast addresses. A packet is delivered to one interface.
+Multicast addresses. A packet is delivered to multiple interfaces.
+Anycast addresses. A packet is delivered to the nearest of multiple interfaces (in terms of routing distance).
+
+IPV6-Uses FD00::/8 as unique local addresses
+

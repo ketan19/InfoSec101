@@ -1,0 +1,11 @@
+---OSI Open systems Interconnects
+	1- Physical--BITS-Hubs,RJ45--1000-baseX-The physical layer is responsible for the physical communication between end
+		stations. It is concerned with the actual encoding and transmission of data in electromechanical
+		terms of voltage and wavelength .RJ45 and 1000-base x
+	2- Data link layer--Frame-NICS,Switch ,Bridges--WAN 802.11 this.MAC adresses and Vlans.Broadcast and collision domains.Decides maintains and establishes how the transfer is accomplished over the physical media.
+	Firewalls is Layer 3 and 4.
+	3- Network--Packet--Dedicated to routing and switching information to different networks. LANs or internetworks
+	4- Transport- Segment-TCP/UDP
+	5- Session- Data-log on /log off
+	6- Presentation-Data-encryption /compression
+	7- Aplication-Data-FTP,POP,HTTP

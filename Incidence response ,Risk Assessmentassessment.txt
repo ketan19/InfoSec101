@@ -1,0 +1,44 @@
+---Steps of Incidence response.
+1- THE PREPARATION PHASE
+	A-Setting up security configs--WAFs,policys,rules and all
+	B-Testing for wekaness.Pentesting things
+2- INCIDENT DETECTION AND ANALYSIS
+Logs alerts,stoppping them ,Splunk sort of things
+3- POST-INCIDENT ACTIVITY
+Lessons learned stuff
+
+
+
+---Disaster recovery
+Before generating a detailed plan, an organization often performs a business impact analysis (BIA) and risk analysis (RA), and it establishes the recovery time objective (RTO) and recovery point objective (RPO).The RTO describes the target amount of time a business application can be down, typically measured in hours, minutes or seconds. The RPO describes the previous point in time when an application must be recovered
+
+ ---Incidence response
+1 Preparation
+2 Detection
+3 Containement 
+4 Eradication
+5 recovery
+6 Lessons learned
+
+---OwASP threat modelling
+1 Decompose the application
+2 Determine and rank threats
+-STRIDE
+Spoofing
+Tampering
+Repudiation
+Information Disclosure
+Denial of Service
+Elevation of Privilege.
+3 Determine countermeasures and mitigation
+
+---Kill  chain model lockheed
+The following is a brief description of its seven steps.
+
+Step 1: Reconnaissance. The attacker gathers information on the target before the actual attack starts. He can do it by looking for publicly available information on the Internet.
+Step 2: Weaponization. The attacker uses an exploit and creates a malicious payload to send to the victim. This step happens at the attacker side, without contact with the victim.
+Step 3: Delivery. The attacker sends the malicious payload to the victim by email or other means, which represents one of many intrusion methods the attacker can use.
+Step 4: Exploitation. The actual execution of the exploit, which is, again, relevant only when the attacker uses an exploit.
+Step 5: Installation. Installing malware on the infected computer is relevant only if the attacker used malware as part of the attack, and even when there is malware involved, the installation is a point in time within a much more elaborate attack process that takes months to operate.
+Step 6: Command and control. The attacker creates a command and control channel in order to continue to operate his internal assets remotely. This step is relatively generic and relevant throughout the attack, not only when malware is installed.
+Step 7: Action on objectives. The attacker performs the steps to achieve his actual goals inside the victim’s network. This is the elaborate active attack process that takes months, and thousands of small steps, in order to achieve.

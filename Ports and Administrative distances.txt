@@ -1,0 +1,35 @@
+ftp-data         20    File Transfer [Default Data]
+ftp              21    File Transfer [Control]
+ssh              22   Secure Shell
+telnet           23    Telnet
+smtp             25    Simple Mail Transfer
+DNS              53    Domain Name Server (DNS)
+pop3            110    Post Office Protocol - Version 3
+ntp             123    Network Time Protocol
+DHCP 			67(server)/68(client),
+IMAP 			143
+SQL server 		1433
+windows RDP 	3389 
+LDAP            389 by default 636 over SSL
+SMB 			445
+Telnt +SSL 		992
+MySQL  			3306
+Syslog 			UDP Port 514
+65535 total number of ports
+Traceroute Linux 33434 port and increments port number
+
+
+Socket is a IP and Port combination
+
+
+
+ADMINISTRATIVE DISTANCE
+EIGRP -5
+eBGP-20
+iBGP-200
+IGRP-100
+OSPF-110
+IS-IS-115
+RIP-120
+interna EIGRP-90
+External EIGRP-170

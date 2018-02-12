@@ -1,0 +1,108 @@
+--- OWASP top 10 
+A1 Injection
+A2 Broken Authentication and Session Management
+A3 Cross-Site Scripting (XSS)
+A4 Insecure Direct Object References
+A5 Security Misconfiguration
+A6 Sensitive Data Exposure
+A7 Missing Function Level Access Control
+A8 Cross-Site Request Forgery (CSRF)
+A9 Using Components with Known Vulnerabilities
+A10 Unvalidated Redirects and Forwards
+
+
+1-XSS-cross site scripting.
+Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted web sites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user. Flaws that allow these attacks to succeed are quite widespread and occur anywhere a web application uses input from a user within the output it generates without validating or encoding it.
+-two categories: stored/persistent and reflected
+Stored XSS Attacks
+Stored attacks are those where the injected script is permanently stored on the target servers, such as in a database, in a message forum, visitor log, comment field, etc. The victim then retrieves the malicious script from the server when it requests the stored information. Stored XSS is also sometimes referred to as Persistent or Type-I XSS.
+--Reflected XSS: 
+For example, the attacker could send the victim a misleading email with a link containing malicious JavaScript. If the victim clicks on the link, the HTTP request is initiated from the victim's browser and sent to the vulnerable web application. The malicious JavaScript is then reflected back to the victim's browser, where it is executed in the context of the victim user's session. 
+
+Stored/persistent XSS: The attack payload is stored in the site itself and when anyone visits the page, regardless of the URL followed, the attack executes.
+
+--Web application firewalls check signatures.
+--escaping validating user input.changing script tags to something else and all.
+--USer awareness creation
+Validate user input
+sanitize user input
+
+
+2-SQL injection
+One traditional approach to preventing SQL injection attacks is to handle them as an input validation problem and either accept only characters from a whitelist of safe values or identify and escape a blacklist of potentially malicious values
+
+Username: a’ OR ‘1=1’
+Password: a’ OR ‘1=1’
+Constructed query: SELECT name from authors where username = ‘a’ OR ‘1=1’ AND password=’a’ OR ‘1=1’
+
+-SELECT name from authors where username = ‘’ UNION SELECT cardNo from CreditCards where acctNo=10032 -- AND password=’’
+-SELECT accountNumber, balance FROM accounts WHERE account_owner_id = 0 OR 1=1
+-SELECT user_id, username, password_hash FROM users WHERE username = 'john'; 
+INSERT INTO group_membership (user_id, group) 
+VALUES (SELECT user_id FROM users WHERE username='john', 'Administrator'); -
+
+Havij is a SQL inject tool.parameterized inputs,whitelisting too
+
+
+Remidiation
+Option 1: Use of Prepared Statements (with Parameterized Queries)
+Option 2: Use of Stored Procedures
+Option 3: White List Input Validation/Regex
+Option 4: Escaping All User Supplied Input
+
+---CSRF
+Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they're currently authenticated. CSRF attacks specifically target state-changing requests, not theft of data, since the attacker has no way to see the response to the forged request. With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker's choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application.
+CSRF is an attack that tricks the victim into submitting a malicious request. It inherits the identity and privileges of the victim to perform an undesired function on the victim's behalf. For most sites, browser requests automatically include any credentials associated with the site, such as the user's session cookie, IP address, Windows domain credentials, and so forth. Therefore, if the user is currently authenticated to the site, the site will have no way to distinguish between the forged request sent by the victim and a legitimate request sent by the victim
+
+http://bank.com/transfer.do?acct=MARIA&amount=100000
+--USE unique identifier,ignore all requests without referrer header
+A CSRF attack simply takes advantage of the fact that the browser sends the Cookie to the web application automatically with each and every request.
+
+-Dont allow browsers to remember passwords,avoid simultaneour browsing when not in use,log off applications when not in use
+
+---Broken authentication
+-session ID in URL.URL sent to friend
+-Application timeouts not set.closing browser directly doesnt stop this.
+-Database doesnt have hashed passwords
+
+
+---Unvalidated Redirects and Forwards
+http://www.example.com/redirect.jsp?url=evil.com
+
+---Using Components with Known Vulnerabilities
+
+
+---Sensitive Data Exposure
+not doing encryption with public key and private key system,not using ssl/tls,unsalted hashes
+
+---Security Misconfiguration
+unused tools,user accounts,temporary access,default passwords,directory listing not enabled
+
+---Missing Function Level Access Control
+/user.php to admin.php flaw
+
+
+
+
+------Directory traversal attack
+
+
+ http://some_site.com.br/get-files.jsp?file=report.pdf
+ To
+  http://some_site.com.br/get-files?file=../../../../some dir/some file 
+  And
+   http://some_site.com.br/some-page?page=http://other-site.com.br/other-page.htm/malicius-code.php   
+
+   
+-Solution -User input whitelisting. WAF,server and systems upgraded.
+
+-----------------------BUFFER overflow attacks 
+Solutions
+Executable space protection-no code execution on stack
+Safe libraries
+choice of languages
+Adress space layout randomization
+
+
+
+

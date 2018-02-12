@@ -1,0 +1,24 @@
+--Sarbanes-Oxley Act (SOX) 
+One of the most important elements of SOX compliance is providing evidence that the financial applications and supporting systems and services are adequately secured to ensure that financial reports can be trusted. This places a special burden on IT security departments. They need to understand which systems, services and processes need to be controlled, which aspects of security are most critical to compliance and what it takes to demonstrate that their company is in compliance.
+The COSO framework recognizes that IT requires a dedicated governance framework like COBIT (Control Objectives for IT). COBIT, a standard maintained by the IT Governance Institute, is internationally accepted as a set of control objectives (i.e. goals) for structuring and maintaining control over IT operations and security, in particular.
+1. Planning and organizing to maintain control
+2. Acquisition and implementation of control mechanisms (e.g., technology) and measures (e.g., policies and processes)
+3. Delivery and support of operations (including control activities)
+4. Monitoring and evaluation of controls
+--Health Insurance Portability and Accountability Act of 1996 (HIPAA) required the Secretary of the U.S. Department of Health and Human Services (HHS) to develop regulations protecting the privacy and security of certain health information.
+Risk Analysis and Management
+Administrative Safeguards
+Physical Safeguards
+Technical Safeguards
+Required and Addressable Implementation Specifications
+Organizational Requirements
+---SOC 2 is similar to SOX
+PRIVACY,Security,confidentialty,integrity,availability
+There are two types of SOC reports:
+
+Type I describes a vendor’s systems and whether their design is suitable to meet relevant trust principles.
+Type II details the operational effectiveness of those systems.
+
+
+--HITRUST   Health information trust alliance
+Better exchange of electronic information and better regard for security. more focussed on Business assocoiated and 3rd party

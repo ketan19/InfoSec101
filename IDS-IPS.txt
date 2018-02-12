@@ -1,0 +1,33 @@
+IDS IPS
+
+IPS - Intrusion Prevention System - inspects traffic flowing through a network and is capable of blocking or otherwise remediating flows that it determines are malicious. Usually uses a combination of traffic and file signatures and heuristic analysis of flows.works with Signatures written with high level Regex Patterns in order to identify known threaths.It also provideds the heuristic analysis of flow by sitting inline and seeing all traffic during an amount of time defined by the user where the IPS will build a database about what is known to be Traffc in order and when traffic might be Out of Order.
+
+IDS - Intrusion Detection System - similar to IPS but does not affect flows in any way - only logs or alerts on malicious traffic.
+It does NOT receives the real traffic from client to server or server to client, it basically receives a copy from the network device attached to it (PC,SPAN session, TAP, Packet Brocker,etc)
+now days the Firewalls come with pre-built IPS engines (known as the UTM generation firewalls or Unified Threath Management) such as the Cisco ASA CX, SRXs, CheckPoints and one of the most valuable todays Palo Alto Firewalls.
+
+IDS could be used n LAN where the IPS wont be able to see traffic. IPS would be in line .
+SNORT
+CheckPoints
+Cisco
+core security
+Dell  Managed Isensor
+Extreme networks
+F5
+Fireeye
+fortinet
+IBM Qradar
+Juniper
+PaloAlto
+Sophos
+HP arcsight
+
+-----HIDS
+Takes screenshot of existing system fies and matches with previous screenshots. Passive system.
+
+Tripwire
+AIDE -Advanced IDS
+
+
+---NIDS- Network intrusion detection systems gain access to network traffic by connecting to a network hub, a network switch configured for port mirroring, or a network tap. Snort is an example
+Statistical anomaly-based IDS and Signature-based IDS

@@ -1,0 +1,48 @@
+NIST 500-83
+
+1-ACcess control-AC
+  Should adress roles,acceeses,scopes responsibilities
+  Designate someone for it
+  Review and update this
+  ensure these are implemented
+  document actions for violation of these
+2-Account management
+	Define account managers
+	Account groups and memberships
+	Designate approval by person
+	Maintain and monitor system accounts
+	process of authorization or reissue access or group memberships
+3-Information Flow enforcement
+	Define where and how information will flow. 
+	Export information not in clear text and encryption and all
+4-Least previledge
+	Assign specific users to confidential and very imp keys and all
+5-Unsucccessful login attemps decision making
+5-System use notifications like banngers on login,screensavers
+7-previous login date and time to be displayed
+8-Limiting number of sessions for each account/users
+9-Auto system lock
+10-session termination for applications .displaying message and actions for reentry
+11-Documenting actions that can be taken without authentication /identification of user and justify why can you do that
+12- remote access policy
+13-wireless access like bluetooth and all .
+14-mobile device access
+15-using external systems
+16-define rules for information sharing
+17-deciding who manages what public content
+
+
+1-Awareness training for new users and existing users
+2-Training specific to roles they hold to company
+3-records of training
+
+
+1-Audit capability
+2-storage capacity for audit work
+3-alerts of audit system modification
+4-internal clocks to be used for time 
+5 non repudiation-someone denying that they performed specific activity
+
+
+---monitor for unauthorized information disclosure
+---Session audit to capture session data

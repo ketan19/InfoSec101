@@ -1,0 +1,21 @@
+SOX, top management must individually certify the accuracy of financial information. In addition, penalties for fraudulent financial activity are much more severe. Also, SOX increased the oversight role of boards of directors and the independence of the outside auditors who review the accuracy of corporate financial statements.[1]
+-Contains 11 sections
+-Result of major financial scandals
+-It created a new, quasi-public agency, the Public Company Accounting Oversight Board, or PCAOB, charged with overseeing, regulating, inspecting, and disciplining accounting firms in their roles as auditors of public companies
+-mandates that senior executives take individual responsibility for the accuracy and completeness of corporate financial reports. 
+-Section 302 requires that the company's "principal officers" (typically the Chief Executive Officer and Chief Financial Officer) certify and approve the integrity of their company financial reports quarterly.
+-It defines the codes of conduct for securities analysts and requires disclosure of knowable conflicts of interest.
+-It describes specific criminal penalties for manipulation, destruction or alteration of financial records or other interference with investigations, while providing certain protections for whistle-blowers.
+-increases the criminal penalties associated with white-collar crimes and conspiracies. It recommends stronger sentencing guidelines and specifically adds failure to certify corporate financial reports as a criminal offense
+-states that the Chief Executive Officer should sign the company tax return.
+requires management and the external auditor to report on the adequacy of the company's internal control on financial reporting (ICFR)ection 404: Assessment of internal control
+FOUR IMPORTANT THINGS
+
+-ACCESS- 
+physical and electronic controls that prevent unauthorized users from viewing sensitive information. This includes keeping servers and data centers in secure locations, but also making sure effective password controls, lockout screens and other measures are in place. Implementing the principle of least privilege (POLP) is generally considered one of the best methods of organization-wide access control.
+-Security
+IT security is, of course, a broad topic. In this case, it means making sure appropriate controls are in place to prevent breaches and having tools to remediate incidents as they occur. Taking steps to manage risk is a good policy regardless of SOX compliance status. Investing smartly in services or appliances that will monitor and protect your financial database is the best way to avoid compliance and security issues altogether.
+-Change management
+Change management involves your IT department’s processes for adding new users or workstations, updating and installing new software, and making any changes to Active Directory databases or other information architecture components. Having a record of what was changed, in addition to when it was changed and who changed it, simplifies a SOX IT audit and makes it easier to correct problems when they arise
+-BackupProcedures 
+Backup systems should be in place to protect your sensitive data. Data centers containing backed-up data including those stored off site or by a third party are subject to the same SOX compliance requirements as those hosted on-premises.

@@ -1,0 +1,26 @@
+1. DHCPDISCOVER
+It is a DHCP message that marks the beginning of a DHCP interaction between client and server. This message is sent by a client (host or device connected to a network) that is connected to a local subnet. It’s a broadcast message that uses 255.255.255.255 as destination IP address while the source IP address is 0.0.0.0
+
+2. DHCPOFFER
+It is DHCP message that is sent in response to DHCPDISCOVER by a DHCP server to DHCP client. This message contains the network configuration settings for the client that sent the DHCPDISCOVER message.
+
+3. DHCPREQUEST
+This DHCP message is sent in response to DHCPOFFER indicating that the client has accepted the network configuration sent in DHCPOFFER message from the server.
+
+4. DHCPACK
+This message is sent by the DHCP server in response to DHCPREQUEST recieved from the client. This message marks the end of the process that started with DHCPDISCOVER. The DHCPACK message is nothing but an acknowledgement by the DHCP server that authorizes the DHCP client to start using the network configuration it received from the DHCP server earlier.
+
+5. DHCPNAK
+This message is the exact opposite to DHCPACK described above. This message is sent by the DHCP server when it is not able to satisfy the DHCPREQUEST message from the client.
+
+6. DHCPDECLINE
+This message is sent from the DHCP client to the server in case the client finds that the IP address assigned by DHCP server is already in use.
+
+7. DHCPINFORM
+This message is sent from the DHCP client in case the IP address is statically configured on the client and only other network settings or configurations are desired to be dynamically acquired from DHCP server.
+
+8. DHCPRELEASE
+This message is sent by the DHCP client in case it wants to terminate the lease of network address it has be provided by DHCP server.
+
+Client used port 68 UDP and server uses 67 UDP
+DHCP messages are a frame.

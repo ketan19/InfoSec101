@@ -1,0 +1,32 @@
+--This International Standard has been prepared to provide a model for establishing, implementing, operating,
+monitoring, reviewing, maintaining and improving an Information Security Management System (ISMS).
+
+--follows Plan-Do-Check-Act
+Plan the system use,objectives and policies  and how it should be implemented
+Do implemented
+Check if its working fine and regular maintenance
+Act if something unusual or anomaly/rule is triggered like a breach
+
+--IDentify assets within the scope of ISMS
+Identifiy threats to these assets
+Identify the vulnerabilities to these threats
+identify the impact of CIA(Confidentiality, Integrity and availability) on the assets
+Assess business impact too of these being exploited.
+Evaluate options to mitigate these risks
+Taking into acount the leagl requirements and affects of all this
+Get management approvale for all these risks
+Detect errors in processing,availability of system, backups for audits
+Determine efforts to prevent breach were effective
+Conduct internal ISMS reviews and enhancements based on review and feedback
+Most important Document all actions
+Training employees
+Manage rosters and storage of ISMS data
+review and edit procedures and find areas for improvement and pipeline tasks for next iteration
+Maintain all records of training and upgrade and history
+Timely internal audits to make sure it complies to internation and national laws and effective implementation
+Indetify potential risks of external systems/vendors and their tools
+Checks during and after employement.
+Physical security 
+
+
+MAINTAINS different controls and their objecvtives. We have to implement these controls

@@ -1,0 +1,267 @@
+
+---What is a swap space?
+A swap space is a certain amount of space used by Linux to temporarily hold some programs that are running concurrently. This happens when RAM does not have enough memory to hold all programs that are executing.
+---PWD print working directory
+---What are daemons?
+Daemons are services that provide several functions that may not be available under the base operating system. Its main task is to listen for service request and at the same time to act on these requests. After the service is done, it is then disconnected and waits for further requests.
+---Kill PID to kill
+---How can you check the memory status ?   free -m for mb and free -g for GB
+---Finger service on linux to be disabled because a remote user can get important information about the system by using that command.
+---Puppet is an IT automation software that is used to push configuration to its clients (puppet agents) using code. Puppet code can do multiple tasks from installing new software to checking file permissions to updating user accounts
+--Cron job normal user.Anacron only by super user.Cron not ot be used when system is to be shut down.anacron works even when system restarts
+---Crontab for scheduling commands
+
+---useradd command is used for creating a new user account. 
+
+---syslogd is responsible for tracking system information and save it to the desired log files.Daemon
+
+---umask command is used to set file permission on newly created files automatically.
+
+---Passwords in unix were stored in /etc/passwd before but now in /etc/shadow..and backup in /etc/shadow-
+
+---lsof -i TCP (displays online open tcp ports)
+   lsof -i UDP
+---netstat -na |grep LISTEN 
+netstat -na|grep CONNECTED
+netstat -nlp
+--TCP ports are 65535 port 0 is reserved
+  UDP has same ports
+---DNS uses UDP
+---UDP is easier to attack as it doesnt use TCP ack,seq numbers.
+---ports for IRC communication 6660-6669,7000
+---Does TLS use asymmetric or symmetric cryptography?
+---What uses port 9100--remote printer
+---mv-move files src to dest.
+rm to delete file and rm -r to remove from directory
+tar options archive file(s) to archieve files
+Uname prints system information
+touch updates timestamp of a file and creates it if isnt there yet.
+Chown change who owns file
+df [options]	Display used and available disk space.
+du [options]	Show how much space each file takes up.
+man displays help
+passwd to change password
+PS to show process status
+su switch to another account
+sudo is super user
+who- displays whows logged in
+top -displays resources being used in the system
+---CHMOD rwx--read write execute---u,g,o---user group other
+
+IPTABLES set IP and tcp/ip based ACL 
+netstat -r routing table
+default TTL 64
+NFS network file system
+nslookup -used to find the DNS server names
+tcpdump- like wireshark  .pcap file
+ntop- connection monitor tool using web page/browser ui. connections and all
+top- processors,memory,connection,process states and almost all,swap space,
+PS- process status ps -e (all processes) -p(PID)  -s(session)
+free- displays total free memory in system
+syslogd-syslogd is responsible for tracking system information and save it to the desired log files. It provides two system utilities which provide system logging and kernel message trapping.
+--crontab-The crontab command is used for scheduling of the commands to run at a later time. SYNTAX
+crontab [ -u user ] file
+crontab [ -u user ] { -l | -r | -e }
+crontab -e Edit your crontab file.
+crontab -l Show your crontab file.
+crontab -r Remove your crontab file.
+minute hour date month day
+-awk-   reading files for text and patterns
+awk '/search_pattern/ { action_to_take_on_matches; another_action; }' file_to_parse
+awk '$2 !~ /^sa/' favorite_food.txt
+grep is used for finding strings and text from files
+dmseg is used to write kernel related messages to output screen
+network bonding- multiple interfaces to have always availability  fault tolerance
+--$ ssh-keygen -t rsa path_where_to_store_key
+disable finger command
+anacron job can be scheduled only by a super user.same as cron
+---powershell
+Test-Connection -computername SERVER1
+PS C:\> if (test-connection -computername Server64 -quiet) {new-pssession Server64}
+Chmod a=rwx.... a=all,u=user....g-group
+chmod u+x filename...add permission to user
+uname -a  -system info
+ip addr show - all interface info
+df -ah  free system space for aLL and hUUMAN readable
+service servicename status- checks service system
+for new ---systemctl status servicename
+open ports---- netstat -t
+Unmask -used to set default permissions automatically when new files created
+Unmask- lists current permissions
+pwd- print woring directory
+When using POP3, your mail is stored on your PC. When using IMAP, the mail is stored on the mail server
+
+process states in linux process R- running,s-interruptible sleep,d uninterrible sleep,t-stopped,x -dead,z-terminated
+WIRESHARK
+-tcp.analysis.flags
+!(arp,dns,icmp)
+tcp contains facebook
+tcp.flags.syn=1 
+IPSEC--ESP (encapculating security payload)
+crypto isakmp policy 1
+authentication pre-share
+encryption 3des
+hash md5
+crypto isakmp key 0 cisci add
+crypto isakmp key 0 cisci address 10.0.0.1(peer)
+access-list 100 permit IP subnet to_IP subnet
+crypto ipsec transform-set MYSET esp-sha-hmac esp-aes
+set all this
+crypto map MyMAP
+
+
+show crypto ipsec sa-----sa security association
+
+Traceroute -I --  --- for ICMP type, Linux default is UDP-----    -n for Non DNS
+CAM- content adressable space
+
+FTP
+SFTP- SSH FTP .. first SSH then SFTP
+SSH - Secure shell protocol
+ symmetrical cipher systems, including AES, Blowfish, 3DES, CAST128, and Arcfour
+SCP- 
+Source(read) -f, sink(write) -t mode
+Simple file transfer protocol
+--arp -a --------displays all arp entries
+arp -d hostname ---to delete that specific entry
+arp -d * -----------------will delete all entries
+Use arp -s < MAC address > to add a static mac adress entry
+
+---UPTIME 
+system uptime,number of users logged in
+---W
+All logged in user,their IP,login time and all
+---Users
+all users 
+
+---whoami
+current username
+
+---ls 
+directory listing
+
+---less filename.extension
+view file quickly
+
+---more filename.extension
+read file with % file remaining
+
+---vi -R /etc/shadows
+to open files in read only mode
+
+---Sftp is secure FTP
+---service servicename start
+to dooperations on service
+
+---Free 
+displays free,total,swap memory
+
+---top -u kgunjal
+u stands for user then username
+
+
+---tar -cvf archive-name.tar /home
+tar -xvf filename.tar
+
+---grep kgunjal /etc/passwd
+finds string kgunjal in passwd file
+
+---ps -ef | grep init
+process status
+
+
+---kill
+to kill processes
+
+
+---md5sum filename
+to calculate md5 hash
+
+---history
+lists commands from history that have been execeuted previously
+
+---chown username:groupname filename
+change file user and group
+
+--- cat a.txt b.txt c.txt d.txt >> abcd.txt
+concatenate files
+
+---ifconfig eth0 down
+disable and interface
+
+---ifconfig eth0 up
+enable an interface
+
+---nslookup tecmint.com
+DNS names for the URL
+
+---dig tecmint.com
+tool for querying DNS nameservers for information about host addresses, mail exchanges, nameservers, and related information.
+
+---uptime
+total server system running time including total users logged in
+
+---wall "Type message here to be sent to all users"
+
+---lsof
+list all open files
+
+
+---netstat -a
+listens to all tcp or UDP connections
+-netstat -at
+tcp only
+-netstat -au
+UDP only
+
+
+-df is diskfree
+du is disk usage
+
+Df lists disk use by the file systems.updated only on file closure
+
+---/dev is the place where all file systems are mounted
+
+---last 
+displays last user login logout
+---lastb 
+last failed user login attempt
+---last reboot
+when last rebooted
+
+---/var/log/
+Linux logs are store here
+
+
+~ means home for CMD in linux.
+
+----
+crontab -u USER [OPTION]
+
+The best way to use crontab is with the options, which are:
+
+l  -l -- list the user's current crontab jobs
+
+l  -e -- edit the user's current crontab jobs
+
+l  -r -- remove the user's current crontab jobs
+
+---- to see ports listening 
+netstat -l
+---- display list of open ports
+lsof -i
+can add GREP 
+lsof -i |GREP listen
+
+---list all processes for a user
+ps -U root
+--Service command to start or stop a service
+ex..Service networking restart
+
+----Tail
+to disply the log in real time
+
+----
+
+
+

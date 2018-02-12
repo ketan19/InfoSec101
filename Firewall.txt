@@ -1,0 +1,33 @@
+IPTABLES is an application etc/sysconfig/iptables
+Target values 
+-Accept
+-Drop
+-Reject
+service status iptables
+service iptables start
+iptables -L(to see current rules)
+iptables --flush
+iptables --flush OUTPUT
+
+sudo iptables -A INPUT -p tcp -s 15.15.15.0/24  -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+
+
+
+
+---Next-generation firewalls 
+Integrates three key assets: enterprise firewall capabilities, an intrusion prevention system (IPS) and application control. 
+high-performance network security appliance that adds intrusion prevention, application and user visibility, SSL inspection, and unknown threat detection to the traditional firewall.
+---In a typical network, ports are closed unless an incoming packet requests connection to a specific port and then only that port is opened. This practice prevents port scanning, a well-known hacking technique
+---STATELESS Firewalls
+Stateless firewalls watch network traffic and restrict or block packets based on source and destination addresses or other static values. They’re not ‘aware’ of traffic patterns or data flows. A stateless firewall uses simple rule-sets that do not account for the possibility that a packet might be received by the firewall ‘pretending’ to be something you asked forA stateless firewall filter, also known as an access control list (ACL), does not statefully inspect traffic. Instead, it evaluates packet contents statically and does not keep track of the state of network connections.
+---STATEFUL Firewall
+Stateful firewalls can watch traffic streams from end to end. They are aware of communication paths and can implement various IP Security (IPsec) functions such as tunnels and encryption. In technical terms, this means that stateful firewalls can tell what stage a TCP connection is in (open, open sent, synchronized, synchronization acknowledge or established). It can tell if the MTU has changed and whether packets have fragmented. etc
+
+
+---Web application firewalls (WAFs) play an important role in any incident response strategy.Placed on edge of networks. WAF analyzes your incoming traffic while identifying and blocking all application layer attack attempts. These include common threats such as SQL injections or cross-site scripting (XSS), application-specific exploit attempts (e.g., CMS vulnerabilities) and more.
+
+
+stateles firewalls block based on packet source destination  or static variables
+-------------------------------------
+web application firewall is able to filter HTTP traffic

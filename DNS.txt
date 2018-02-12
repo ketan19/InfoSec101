@@ -1,0 +1,59 @@
+Computer cache-> Resolver(ISP cache)->Root server->TLD(for .com, .net)-> Authorative name server
+--------------------------------------------------------------------------------------
+
+-Reverse DNS used for SPAM filters
+
+------A-Adress record-
+Returns a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host, but it is also used for DNSBLs, storing 	  subnet masks in RFC 1101, etc.
+-----AAAA-IPV6 adress record 
+Returns a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the host.
+
+-----CNAME-Canonical name record
+Alias of one name to another: the DNS lookup will continue by retrying the lookup with the new name.
+For example, suppose you want to put an FTP server named ftp1.noam.reskit.com on your noam.reskit.com subdomain, but you know that in six months you will move it to a computer named ftp2.noam.reskit.com, and you do not want your users to have to know about the change. You can just create an alias called ftp.noam.reskit.com that points to ftp1.noam.reskit.com, and then when you move your computer, you need only change the CNAME record to point to ftp2.noam.reskit.com. For example, the following CNAME resource record creates an alias for ftp1.noam.reskit.com:
+
+ftp.noam.reskit.com. IN CNAME ftp1.noam.reskit.com.
+
+-----NS-Name server record
+Stored at TLD to point to the authoritative name server which has the IP address.multiple records are there for pointing to subdomains or  for disaster or DDOS situation
+
+-----SRV -Service resource record
+Similar to MX mail server record but for services such as ftp,http. Specifies multiple services such as multiple webservers and ports and protocols .
+The following example shows SRV records for Web servers:
+
+_http._tcp.reskit.com. IN SRV 0 0 80 webserver1.noam.reskit.com.
+
+_http._tcp.reskit.com. IN SRV 10 0 80 webserver2.noam.reskit.com.
+
+-----SOA Start of authority record
+Shown when you do NSLOOKUP(Windows)/Dig(Linux). Shows the promary name server name, Email of admin,TTL,refresh time,revision number which increases after each update, expiration time too.
+
+
+-----MX-Mail exchange record
+Maps a domain name to a list of message transfer agents for that domain. Also specifies multple Mail server names
+
+-----CAA-Certification authority authorization
+DNS Certification Authority Authorization, constraining acceptable CAs for a host/domain
+
+
+-----HIP- Host identity protocol
+
+-----LOC-location record
+Specifies a geographical location associated with a domain name
+
+
+-----IPSECKEY-
+Key record that can be used with IPsec
+
+-----CERT-Certificate record
+Stores PKIX, SPKI, PGP, etc.
+
+
+
+------------------------------------------------Reverse DNS
+if Reverse DNS mapping is setup then for IPv4 66.40.65.49 reverse dns entry is 49.65.40.66.in-addr.arpa and for IPV6 its x.x.x...x.ipv6.arpa
+Typical reverse DNS lookup path: DNS resolver => root servers => ARIN (North American IP registry) => Local ISP => Acme Inc. DNS servers.
+
+Linux-dig -x x.x.x.x
+windows ping -a x.x.x.x
+
